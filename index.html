@@ -374,12 +374,12 @@ curl -X POST <span class="se">\</span>
     "height_inches": 0, 
     "state": "TX", 
     "weight": 180,
-  "address_1": "1000 Main St.",
-  "address_2": "Apt 555",
-  "city": "Austin",
-  "state": "TX",
-  "postal_code": 78701
-  "ssn": "555-55-5555"
+    "address_1": "1000 Main St.",
+    "address_2": "Apt 555",
+    "city": "Austin",
+    "state": "TX",
+    "postal_code": 78701
+    "ssn": "555-55-5555"
 }
 '</span>
 </code></pre>
@@ -487,7 +487,7 @@ curl -X POST <span class="se">\</span>
   -H <span class="s1">'Accept:application/json'</span> <span class="se">\</span>
   -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   -d <span class="s1">'{
-      "term": 2,
+    "term": 2,
     "face_value": 50000
 }
 '</span>
@@ -637,7 +637,7 @@ curl -X POST <span class="se">\</span>
   -H <span class="s1">'Accept:application/json'</span> <span class="se">\</span>
   -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   -d <span class="s1">'{
-      "card_number": "424242424242",
+    "card_number": "424242424242",
     "card_expiration_date": "02/2020"
     "card_cvc": 123
 }
@@ -713,7 +713,7 @@ curl -X GET <span class="se">\</span>
   -H <span class="s1">'Authorization: 82zZIHeBqUlBtICMX5li'</span> <span class="se">\</span>
   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
   -H <span class="s1">'Accept:application/json'</span> <span class="se">\</span>
-  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> 
 <span class="s1">'
 </span></code></pre>
 <blockquote>
@@ -836,10 +836,6 @@ curl -X POST <span class="se">\</span>
 <h2 id='lifestyle-section'>Lifestyle Section</h2>
 <p><strong><em>This is identical to the medical section with a different set of questions</em></strong></p>
 <h2 id='submitting-the-application'>Submitting The Application</h2>
-<p>When the application has all sections complete and <code>&quot;state&quot;: &quot;ready_to_submit&quot;</code>, submit the application by calling the endpoint</p>
-
-<p><code>POST https://api.hellobestow.com/v2/applications/:application_id/submit</code> </p>
-
 <blockquote>
 <p>Endpoint URL</p>
 
@@ -871,7 +867,11 @@ curl -X POST <span class="se">\</span>
     </span><span class="s2">"followup"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='follow-up-section'>Follow-up Section</h2>
+</span></code></pre>
+<p>When the application has all sections complete and <code>&quot;state&quot;: &quot;ready_to_submit&quot;</code>, submit the application by calling the endpoint</p>
+
+<p><code>POST https://api.hellobestow.com/v2/applications/:application_id/submit</code> </p>
+<h2 id='follow-up-section'>Follow-up Section</h2>
 <p>TODO: After submitting the application, Bestow will run internal checks in order to determine eligibility for approval.  After this process, it may be necessary to ask follow-up questions to the applicant.</p>
 <h2 id='outstanding-questions-for-internal-discussion'>Outstanding Questions (for internal discussion)</h2>
 <p>Will the API user need to submit a field for </p>
